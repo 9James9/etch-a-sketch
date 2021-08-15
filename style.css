@@ -1,8 +1,11 @@
 #container {
-    border: 2px solid black;
+    /*
     width: 500px;
     height: 500px;
+    */
     box-sizing: border-box;
+    display: inline-block;
+
 }
 .box {
     border: 1px solid black;
@@ -11,9 +14,31 @@
 }
 #grid-container {
     display: inline-block;
+    border: 2px solid black;
+    
 }
 .row {
     display: block;
     width: 100%;
     font-size: 0;
+}
+#buttons {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 5px;
+    margin-right: 2%;
+    
+}
+#header {
+    text-align: center;
+}
+#buttons button {
+color: red;
+padding: 10px 0;
+margin: 10px 0
+}
+#mainContainer {
+    display: flex;
+    justify-content: center;
 }
