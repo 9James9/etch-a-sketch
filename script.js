@@ -2,7 +2,7 @@ let container = document.querySelector('#container')
 
 let size = 16;
 let gridContainer = document.querySelector('#grid-container')
-const maxWidth = 400;
+const maxWidth = 496;
 const maxHeight = 400;
 function makeBlocks() {
    
@@ -25,4 +25,27 @@ function makeBlocks() {
     }
   }
 }
-makeBlocks()
+window.addEventListener('load',makeBlocks)
+
+let clearGrid = function () {
+    const gridArray = Array.from(gridContainer.childNodes)
+    gridArray.forEach((element) => {
+        gridContainer.removeChild(element)
+    })
+    }
+
+let buttonContainer = document.querySelector('#buttons')
+let resize = document.createElement('button')
+resize.textContent = "Resize grid"
+buttonContainer.appendChild(resize)
+
+resize.addEventListener('click', () => {
+    size = prompt('Choose what size you would like (1-100)')
+    clearGrid()
+    makeBlocks()
+})
+
+let reset = document.createElement('button')
+reset.textContent = "Clear grid"
+buttonContainer.appendChild(reset)
+reset.addEventListener('click',clearGrid)
