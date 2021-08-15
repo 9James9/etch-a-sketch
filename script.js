@@ -29,15 +29,28 @@ reset.addEventListener('click', () => {
     location.reload()
 })
 
+let color = document.createElement('button')
+color.textContent = "Black"
+buttonContainer.appendChild(color)
+color.addEventListener('click', () => {
+    mode = "default"
+})
 
 let rainbow = document.createElement('button')
 rainbow.textContent = "Random Colors!"
 buttonContainer.appendChild(rainbow)
-rainbow.classList.add('rainbow')
+rainbow.classList.add('rainbowBtn')
 rainbow.addEventListener('click', () => {
     mode = "rainbow";
 })
 
+let eraser = document.createElement('button')
+eraser.textContent = "Eraser"
+eraser.classList.add("eraserBtn")
+buttonContainer.appendChild(eraser)
+eraser.addEventListener('click', () => {
+    mode = "eraser"
+})
 
 
 function makeBlocks() {
