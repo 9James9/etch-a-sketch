@@ -7,21 +7,25 @@
     display: inline-block;
 
 }
+
 .box {
     border: 1px solid black;
     display: inline-block;
     box-sizing: border-box;
 }
+
 #grid-container {
     display: inline-block;
     border: 2px solid black;
-    
+
 }
+
 .row {
     display: block;
     width: 100%;
     font-size: 0;
 }
+
 #buttons {
     display: flex;
     flex-direction: column;
@@ -30,29 +34,65 @@
     margin-right: 2%;
     justify-content: center;
 }
+
 #header {
     text-align: center;
 }
+
 #buttons button {
-padding: 20px 0;
-margin: 20px 0
+    padding: 20px 0;
+    margin: 20px 0
 }
+
 #mainContainer {
     display: flex;
     justify-content: center;
 }
+
 .rainbowBtn {
-    background-image: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
     color: orangered;
 }
+
+.rainbowBtn:hover {
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out
+}
+
 .reset {
-    background-color: red;
+    background-color: rgb(145, 92, 182);
     color: white;
 }
+
 .black {
     background-color: black;
     color: white;
 }
+
+.black:hover {
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out
+}
+
 .eraserBtn {
     background-color: pink;
+}
+
+.eraserBtn:hover {
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out
+}
+
+.reset:hover {
+    background-color: red;
+    border-radius: 40px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out
+}
+.resizeBtn {
+    background-color: bisque;
+}
+.resizeBtn:hover {
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out
 }

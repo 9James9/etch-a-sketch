@@ -10,6 +10,7 @@ let mode = "default"
 let buttonContainer = document.querySelector('#buttons')
 let resize = document.createElement('button')
 resize.textContent = "Resize grid"
+resize.classList.add('resizeBtn')
 buttonContainer.appendChild(resize)
 
 resize.addEventListener('click', () => {
