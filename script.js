@@ -15,6 +15,9 @@ function makeBlocks() {
       let box = document.createElement('div');
       box.className = "box";
       row.appendChild(box);
+      box.addEventListener('mouseover', () => {
+        box.classList.add('hover')
+    })
     }
     document.getElementById('grid-container').appendChild(row);
     
@@ -25,6 +28,7 @@ function makeBlocks() {
     }
   }
 }
+
 window.addEventListener('load',makeBlocks)
 
 let clearGrid = function () {
