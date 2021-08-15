@@ -2,11 +2,18 @@
     border: 2px solid black;
     width: 500px;
     height: 500px;
+    box-sizing: border-box;
 }
-.grid {
+.box {
     border: 2px solid black;
-    display: inline-grid;
-    padding: 0px;
-    grid-template-rows: 20px 1fr;
-    grid-template-columns: 20px 1fr;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#grid-container {
+    display: inline-block;
+}
+.row {
+    display: block;
+    width: 100%;
+    font-size: 0;
 }
