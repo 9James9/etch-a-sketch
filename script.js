@@ -36,14 +36,11 @@ buttonContainer.appendChild(rainbow)
 rainbow.classList.add('rainbow')
 rainbow.addEventListener('click', () => {
     mode = "rainbow";
-    clearGrid()
-    makeBlocks()
 })
-            
+
+
 
 function makeBlocks() {
-
-
     for (let i = 0; i < size; i++) {
         let row = document.createElement('div');
         row.className = "row";
@@ -52,21 +49,7 @@ function makeBlocks() {
             let box = document.createElement('div');
             box.className = "box";
             row.appendChild(box);
-            
-            
-            if (mode == "rainbow") {
-                box.addEventListener('mouseover', () => {
-                    const color1 = random(255)
-                    const color2 = random(255)
-                    const color3 = random(255)
-                    box.style.backgroundColor = `rgb(${color1}, ${color2}, ${color3})`
-                })
-            } else if (mode == "" || mode == "default")
-            {
-                box.addEventListener('mouseover', () => {
-                    box.style.backgroundColor = "black";
-                })
-            }
+            box.addEventListener('mouseover',changeCellColor)
         }
         document.getElementById('grid-container').appendChild(row);
 
@@ -85,4 +68,15 @@ let clearGrid = function () {
         gridContainer.removeChild(element)
     })
 }
-
+function changeCellColor () {
+    if (mode == "default") {
+        this.style.backgroundColor = "black"
+    } else if (mode == "rainbow") {
+        const color1 = random(255)
+        const color2 = random(255)
+        const color3 = random(255)
+        this.style.backgroundColor = `rgb(${color1}, ${color2}, ${color3})`
+    } else if (mode == "eraser") {
+        this.style.backgroundColor = "white"
+    }
+}
