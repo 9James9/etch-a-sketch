@@ -22,22 +22,17 @@ resize.addEventListener('click', () => {
     }
 })
 
-let reset = document.createElement('button')
-reset.textContent = "Reset grid"
-buttonContainer.appendChild(reset)
-reset.addEventListener('click', () => {
-    location.reload()
-})
 
 let color = document.createElement('button')
 color.textContent = "Black"
 buttonContainer.appendChild(color)
+color.classList.add('black')
 color.addEventListener('click', () => {
     mode = "default"
 })
 
 let rainbow = document.createElement('button')
-rainbow.textContent = "Random Colors!"
+rainbow.textContent = "Rainbow Mode!"
 buttonContainer.appendChild(rainbow)
 rainbow.classList.add('rainbowBtn')
 rainbow.addEventListener('click', () => {
@@ -50,6 +45,14 @@ eraser.classList.add("eraserBtn")
 buttonContainer.appendChild(eraser)
 eraser.addEventListener('click', () => {
     mode = "eraser"
+})
+
+let reset = document.createElement('button')
+reset.textContent = "Reset grid"
+buttonContainer.appendChild(reset)
+reset.classList.add('reset')
+reset.addEventListener('click', () => {
+    location.reload()
 })
 
 

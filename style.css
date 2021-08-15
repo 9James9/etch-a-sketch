@@ -28,17 +28,31 @@
     float: left;
     margin-left: 5px;
     margin-right: 2%;
-    
+    justify-content: center;
 }
 #header {
     text-align: center;
 }
 #buttons button {
-color: red;
-padding: 10px 0;
-margin: 10px 0
+padding: 20px 0;
+margin: 20px 0
 }
 #mainContainer {
     display: flex;
     justify-content: center;
+}
+.rainbowBtn {
+    background-image: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+    color: orangered;
+}
+.reset {
+    background-color: red;
+    color: white;
+}
+.black {
+    background-color: black;
+    color: white;
+}
+.eraserBtn {
+    background-color: pink;
 }
