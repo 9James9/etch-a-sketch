@@ -1,11 +1,7 @@
 #container {
-    /*
-    width: 500px;
-    height: 500px;
-    */
     box-sizing: border-box;
     display: inline-block;
-
+    min-width: 800px;
 }
 
 .box {
@@ -33,6 +29,9 @@
     margin-left: 5px;
     margin-right: 2%;
     justify-content: center;
+    border: 5px solid black;
+    padding-left: 15px;
+    padding-right: 15px
 }
 
 #header {
@@ -60,7 +59,7 @@
 }
 
 .reset {
-    background-color: rgb(145, 92, 182);
+    background-color: lightcoral;
     color: white;
 }
 
