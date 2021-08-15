@@ -5,7 +5,6 @@ random = function (num) {
 let size = 16;
 let gridContainer = document.querySelector('#grid-container')
 const maxWidth = 600;
-const maxHeight = 400;
 let mode = "default"
 let buttonContainer = document.querySelector('#buttons')
 let resize = document.createElement('button')
