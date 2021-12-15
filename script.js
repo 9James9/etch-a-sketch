@@ -1,5 +1,4 @@
-let container = document.querySelector('#container')
-random = function (num) {
+let random = function (num) {
     return Math.floor(Math.random() * num)
 }
 let size = 16;
@@ -70,7 +69,7 @@ function makeBlocks() {
         document.getElementById('grid-container').appendChild(row);
 
         var boxes = document.getElementsByClassName("box");
-        for (k = 0; k < boxes.length; k++) {
+        for (let k = 0; k < boxes.length; k++) {
             boxes[k].style.width = maxWidth / size + "px";
             boxes[k].style.height = maxWidth / size + "px";
         }
